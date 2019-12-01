@@ -1,0 +1,16 @@
+create table parking_spot (
+    id number NOT NULL,
+    latitude NUMBER(9,6) NOT NULL,
+    longitude NUMBER(9,6) NOT NULL,
+    available NUMBER(1) DEFAULT 1 NOT NULL,
+    vehicle varchar2(10 CHAR),
+    starttime NUMBER(38,0) default 0,
+    endtime NUMBER(38,0) default 0,
+    parkingrate NUMBER(9,2) NOT NULL,
+    constraint ps1_pk primary key (id)
+);
+
+REM SAMPLE DATA, INSERTING into PARKING_SPOT
+SET DEFINE OFF;
+Insert into APPLEDEVECM.PARKING_SPOT (ID,LATITUDE,LONGITUDE,AVAILABLE,VEHICLE,STARTTIME,ENDTIME,PARKINGRATE) values (1,32.9697,-96.80322,1,'mh12pc2573',1575167739085,1575168272902,0.5);
+Insert into APPLEDEVECM.PARKING_SPOT (ID,LATITUDE,LONGITUDE,AVAILABLE,VEHICLE,STARTTIME,ENDTIME,PARKINGRATE) values (2,32.9697,-90.80322,1,null,0,0,2);
